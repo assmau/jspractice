@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Traffic Light</title>
+	<style>
+		ul, li {
+			list-style: none;
+			padding: 0;
+		}
+
+		ul li {
+			width: 100px; 
+			height: 100px;
+			border-radius: 50%;
+			background: gray;
+			margin-bottom: 10px;
+		}
+
+		ul li:last-child {
+			margin-bottom: 0;
+		}
+
+		ul li.red {
+			background: red;
+		}
+
+		ul li.yellow {
+			background: yellow;
+		}
+
+		ul li.green {
+			background: green;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li class="circle red" data="red"></li>
+		<li class="circle" data="yellow"></li>
+		<li class="circle" data="green"></li>
+
+		<button class="start">Start</button>
+		<button class="pause">Pause</button>
+	</ul>
+</body>
+<script src="js/lesson-traffic.js"></script>
+</html>
