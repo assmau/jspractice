@@ -19,12 +19,16 @@ var buttonPause = document.querySelector('.pause');
 
 var currentInterval = null;
 
-// buttonStart.addEventListener("click", function() {setInterval(changeLight, 1000)});
 
 buttonStart.addEventListener("click", function () {
-	 	currentInterval = setInterval(changeLight, 1000);
-});
+	 	
+	 	if (currentInterval !== null) {
+	 		clearInterval(currentInterval);
+			currentInterval = null;
+		}
 
+		currentInterval = setInterval(changeLight, 1000);
+});
 
 
 buttonPause.addEventListener('click', function () {
