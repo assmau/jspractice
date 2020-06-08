@@ -42,6 +42,3 @@ function minus() {
 var buttonMinus = document.getElementById('minus');
 buttonMinus.addEventListener('click', minus);
 
-
-		
-

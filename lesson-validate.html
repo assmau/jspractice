@@ -6,18 +6,25 @@
 
 	<style>
 		input {display: block; margin-bottom: 10px;}
+		.hidden {
+			display: none;
+		}
+
+		.error_message {
+			color: red;
+		}
 	</style>
 </head>
 <body>
-	<form action="#">
-	  <label>Имя: <input type="text" id="name"></label>
-	  <label>Пароль: <input type="password" id="password"></label>
-	  <label>Повторите пароль: <input type="password" id="r-password"></label>
-	  <label>Email: <input type="email" id="txtEmail"></label>
+	<form id="form">
+	  <label class="name_input">Имя: <input type="text" id="name"><p class="hidden error_message">Имя пустое</p></label>
+	  <label class="password_input">Пароль: <input type="password" id="password"><p class="hidden error_message">пароль не менее 6 символов</p></label>
+	  <label class="rpassword_input">Повторите пароль: <input type="password" id="r-password"><p class="hidden error_message">пароли должны совпадать</p></label>
+	  <label class="email_input">Email: <input type="email" id="txtEmail"><p class="hidden error_message">не верный эмейл</p></label>
 
 	  <div id="error-popup"></div>
 
-	  <button id="btn">Отправить</button>
+	  <input type="submit" id="btn" value="Отправить"/>
 	</form>
 </body>
 <script src="js/lesson-validate.js"></script>

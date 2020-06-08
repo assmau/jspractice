@@ -1,4 +1,5 @@
-function validateform() {
+function validateform(e) {
+  e.preventDefault();
 
 	var name = document.getElementById('name').value;  
 	var password = document.getElementById('password').value;
@@ -9,26 +10,27 @@ function validateform() {
 
 	var txtError = document.getElementById('error-popup');
   
-	if (name==null || name==""){
-  		txtError.innerHTML = "Имя пустая";
-  		txtError.style.color = 'red';
-	}
+	if (!name){
+  		showErrorMessage('name_input');
+	} 
   
-  	else if(password.length < 6) {
-  		txtError.innerHTML = "Пароль не должен быть менше 6 символов";
-  		txtError.style.color = 'red';
+  	if(password.length < 6) {
+  		showErrorMessage('password_input');
   	}
 
-  	else if(password !== rpassword) {
-  		txtError.innerHTML = "Пароли не совпадают";
-  		txtError.style.color = 'red';
+  	if(password !== rpassword) {
+  		showErrorMessage('rpassword_input');
   	}
 
-  	else if (!filter.test(email.value)) {
-   		txtError.innerHTML = "Пожалуйста, укажите действующий адрес электронной почты";
-   		txtError.style.color = 'red';
+  	if (!filter.test(email.value)) {
+   		showErrorMessage('email_input');
   	}
 }  
 
-var button = document.getElementById('btn');
-button.addEventListener('click', validateform);
+function showErrorMessage(inputClassName) {
+  var errorMessage = document.getElementsByClassName(inputClassName)[0].getElementsByClassName('error_message')[0];
+  errorMessage.setAttribute('class', 'error_message');
+}
+
+var form = document.getElementById('form');
+form.addEventListener('submit', validateform);
