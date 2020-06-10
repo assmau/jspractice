@@ -18,18 +18,18 @@ function showSlides(n) {
 showSlides(slideIndex);
 
 
-function plusSlide() {
+function nextSlide() {
     showSlides(slideIndex += 1);
 }
 
-function minusSlide() {
+function prevSlide() {
     showSlides(slideIndex -= 1);  
 }
 
 
 var goNext = document.querySelector('.next');
-goNext.addEventListener('click', plusSlide);
+goNext.addEventListener('click', nextSlide);
 
 
 var goPrev = document.querySelector('.prev');
-goPrev.addEventListener('click', minusSlide);
+goPrev.addEventListener('click', prevSlide);
