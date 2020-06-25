@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Popup</title>
+	<style>	
+		button {cursor: pointer;}
+		.popup {
+			position: fixed;
+		    top: 0;
+		    left: 0;
+		    right: 0;
+		    bottom: 0;
+		    margin: auto;
+		    box-shadow: 0 6px 11px rgba(0,0,0,0.2);
+		    width: 500px;
+		    max-height: 150px;
+		    padding: 40px;
+		    display: none;
+		}
+
+		.popup.active {
+			display: block;
+		}
+
+		.heading {
+			border-bottom: 1px solid #ccc;
+			text-align: center;
+			padding: 10px 0;
+			font-size: 30px;
+		}
+
+		.description {
+			padding: 20px 0;
+		}
+
+		.close {
+			position: absolute;
+			right: -5px;
+			top: -5px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<button class="button">Click popup</button>
+	<div class="popup">
+		<div class="heading">Title</div>
+		<div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid laborum, fugit sint aperiam totam eligendi, dignissimos et. Fugit praesentium quaerat vero, nam, eaque maiores unde porro, libero eveniet consequuntur ex!</div>
+		<div class="close">X</div>
+	</div>
+</body>
+<script type="text/javascript" src="js/lesson-popup.js"></script>
+</html>
