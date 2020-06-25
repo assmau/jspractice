@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		
+	</style>
+</head>
+<body>
+	<input type="text" id="field" value="0">
+	<button class="plus">+</button>
+	<button class="minus">-</button>
+</body>
+<script type="text/javascript">
+	function plusFun() {
+		var field = document.getElementById('field');
+		var current = parseInt(field.value);
+
+		if(current < 10) {
+			field.value = current + 1;
+		}
+	}
+
+	var btnPlus = document.querySelector('.plus');
+	btnPlus.addEventListener('click', plusFun);
+
+	function minusFun() {
+		var field = document.getElementById('field');
+		var current = parseInt(field.value);
+
+		if(current > 0) {
+			field.value = current - 1;
+		}
+	}
+
+	var btnMinus = document.querySelector('.minus');
+	btnMinus.addEventListener('click', minusFun);
+</script>
+</html>

@@ -13,11 +13,8 @@ function plus() {
   answer.innerHTML = result;
 }
 
-
-
 var buttonPlus = document.getElementById('plus');
 buttonPlus.addEventListener('click', plus);
-
 
 
 // Minus
@@ -37,8 +34,5 @@ function minus() {
   answer.innerHTML = result;
 }
 
-
-
 var buttonMinus = document.getElementById('minus');
 buttonMinus.addEventListener('click', minus);
-
